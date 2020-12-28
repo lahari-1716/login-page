@@ -1,0 +1,20 @@
+<mat-card>
+  <form (submit)="onSavePost(postForm)" #postForm="ngForm">
+
+      <input matInput type="text" name="title" [ngModel]="post?.title" required placeholder="email" minlength="4" #title="ngModel"/>
+      <mat-error *ngIf="title.invalid">please enter</mat-error>
+      <hr>
+
+      <input matInput type="text" name="content" [ngModel]="post?.content" required placeholder="password" #content="ngModel"/>
+      <mat-error *ngIf="content.invalid">please enter</mat-error>
+
+    <hr>
+    <button  color="accent" type="submit">login</button>
+  </form>
+</mat-card>
+
+
+
+
+
+
